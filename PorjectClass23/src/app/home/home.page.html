@@ -1,0 +1,81 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar color="purple">
+    <ion-title color="light">
+      ข้อมูลนักเรียน ปวช.2/3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+<ion-label style="text-align: center;">
+  <h1><b>กรอกข้อมูลนักเรียน </b></h1>
+</ion-label>
+
+<ion-item position="floating">
+  <ion-label >
+รหัสนักเรียน
+<ion-input type="text" [(ngModel)]="txtidstu"> </ion-input>
+  </ion-label>
+
+</ion-item>
+
+<ion-item position="floating">
+  <ion-label >
+ชื่อ-สกุล
+<ion-input type="text" [(ngModel)]="txtname"> </ion-input>
+  </ion-label>
+
+</ion-item>
+
+<ion-item position="floating">
+  <ion-label >
+ชื่อเล่น
+<ion-input type="text" [(ngModel)]="txtnname"> </ion-input>
+  </ion-label>
+
+</ion-item>
+
+<ion-item position="floating">
+  <ion-label >
+อายุ
+<ion-input type="text" [(ngModel)]="txtage"> </ion-input>
+  </ion-label>
+
+</ion-item>
+
+<ion-item position="floating">
+  <ion-label >
+เบอร์โทรศัพท์
+<ion-input type="text" [(ngModel)]="txtphone"> </ion-input>
+  </ion-label>
+
+</ion-item>
+
+<ion-item position="floating">
+  <ion-label >
+ที่อยู่
+<ion-input type="text" [(ngModel)]="txtaddress"></ion-input>
+  </ion-label>
+</ion-item>
+
+<ion-item position="floating">
+  <ion-label >
+สถานะภาพ
+</ion-label>
+<ion-list>
+  <ion-item>
+    <ion-select aria-label="Fruit" interface="popover" placeholder="Select fruit" [(ngModel)]="txtstatus">
+      <ion-select-option value="apples">โสด</ion-select-option>
+      <ion-select-option value="oranges">สมรสแล้ว</ion-select-option>
+      <ion-select-option value="bananas">หย่าร้าง</ion-select-option>
+      <ion-select-option value="bananas">มีแฟนแล้ว</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+</ion-item>
+<div class="text" style="text-align: center;"  >
+  <ion-button expand="block" color="purple" (click)="addmember()">
+    <H4>บันทึกข้อมูล</H4></ion-button>
+    <ion-button slot="end"(click)="showdata()" color="warning">ดูข้อมูล</ion-button>
+</div>
+</ion-content>
